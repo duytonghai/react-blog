@@ -1,7 +1,6 @@
 require('node-jsx').install({extension: '.jsx'});
 
 var express = require('express');
-var jsxTransform = require('jsxtransform');
 
 var Index = require("./app/server/Index");
 
@@ -26,7 +25,6 @@ server.use(function(req, res, next) {
   next();
 });
 
-server.use(jsxtransform());
 server.use(express.static("./public"));
 
 server.listen(port);

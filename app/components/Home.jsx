@@ -2,7 +2,6 @@ var _ = require('lodash');
 var React = require('react');
 var Router = require('react-router');
 var Link = Router.Link;
-var RouteHandler = Router.RouteHandler;
 
 var data = require('../database/data');
 
@@ -17,9 +16,7 @@ var Home = React.createClass({
 
     return (
       <div>
-        <Link to={"about"}>About</Link>
         {menu}
-        <RouteHandler />
       </div>
     );
   }
