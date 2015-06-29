@@ -13,6 +13,7 @@ var App = React.createClass({displayName: "App",
 
 module.exports = App;
 
+
 },{"react":199,"react-router":32}],2:[function(require,module,exports){
 var React = require('react');
 var Router = require('react-router');
@@ -25,6 +26,7 @@ var About = React.createClass({displayName: "About",
 });
 
 module.exports = About;
+
 
 },{"react":199,"react-router":32}],3:[function(require,module,exports){
 var _ = require('lodash');
@@ -45,6 +47,7 @@ var Home = React.createClass({displayName: "Home",
 
     return (
       React.createElement("div", null, 
+        React.createElement("a", {href: "/#/about"}, "Home"), 
         menu
       )
     );
@@ -52,6 +55,7 @@ var Home = React.createClass({displayName: "Home",
 });
 
 module.exports = Home;
+
 
 },{"../database/data":4,"lodash":7,"react":199,"react-router":32}],4:[function(require,module,exports){
 exports.categories = {
@@ -122,6 +126,7 @@ window.app = (function() {
     React.render(React.createElement(Handler, null), document.body);
   });
 })();
+
 
 },{"./App":1,"./components/About":2,"./components/Home":3,"lodash":7,"react":199,"react-router":32}],6:[function(require,module,exports){
 // shim for using process in browser

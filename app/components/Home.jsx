@@ -16,6 +16,7 @@ var Home = React.createClass({
 
     return (
       <div>
+        <a href="/#/about">Home</a>
         {menu}
       </div>
     );
