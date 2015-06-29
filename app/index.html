@@ -4,6 +4,23 @@
     <meta charset="utf-8">
     <title>Duy's blog developed by ReactJS</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/fave-icon.png" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+        $('div.description').each(function(){
+          $(this).css('display', 'block');
+        });
+        
+        $('div.content-top-grid').hover(function(){
+          $(this).children('.description').stop().fadeTo(500, 1);
+        },function(){
+          $(this).children('.description').stop().fadeTo(500, 0);
+        });
+        
+      });
+    </script>
   </head>
   <body>
     <div id="app">{{yield:app}}</div>

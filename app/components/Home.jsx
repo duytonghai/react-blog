@@ -5,19 +5,21 @@ var Link = Router.Link;
 
 var data = require('../database/data');
 
+var Header = require('./Header');
+var Article = require('./Article');
+var Slider = require('./Slider');
+var Quote = require('./Quote');
+var Footer = require('./Footer');
+
 var Home = React.createClass({
   render: function() {
-    var categories = data.categories.data;
-    var menu = [];
-
-    _.forEach(categories, function(category) {
-      menu.push(<div key={category.id}>{category.name_vn}</div>);
-    });
-
     return (
       <div>
-        <a href="/#/about">Home</a>
-        {menu}
+        <Header />
+        <Quote />
+        <Slider />
+        <Article />
+        <Footer />
       </div>
     );
   }
