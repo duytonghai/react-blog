@@ -5,7 +5,14 @@ var Link = Router.Link;
 var Contact = React.createClass({
 	displayName: 'Contact',
   render: function() {
-    return <Link to={"home"}>Home</Link>;
+    return (
+    	<div className="blog-articlas">
+    		<div className="wrap">
+	    		Contact<br />
+	    		<Link to={"home"}>Home</Link>
+	    	</div>
+    	</div>
+  	);
   }
 });
 

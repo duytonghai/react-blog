@@ -2,7 +2,7 @@ require('node-jsx').install({extension: '.jsx'});
 
 var express = require('express');
 
-var Index = require("./app/server/Index");
+var Index = require("./server/Index");
 
 var server = express();
 var port = 8080;

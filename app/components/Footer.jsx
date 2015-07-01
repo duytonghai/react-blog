@@ -22,10 +22,9 @@ var Footer = React.createClass({
           </div>
           <div className="footer-center">
             <ul>
-              <li><a href="#"><span> </span></a></li>
-              <li><a href="#"><span> </span></a></li>
-              <li><a href="#"><span> </span></a></li>
-              <li><a href="#"><span> </span></a></li>
+              <li><a href="https://twitter.com/duytonghai" target="_blank"><span> </span></a></li>
+              <li><a href="https://www.facebook.com/haiduytong" target="_blank"><span> </span></a></li>
+              <li><a href="https://github.com/duytonghai" target="_blank"><span> </span></a></li>
               <div className="clear"> </div>
             </ul>
           </div>
