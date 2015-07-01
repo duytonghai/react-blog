@@ -3,6 +3,8 @@
  */
 
 var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
 
 var Header = React.createClass({
   displayName: 'Header',
@@ -11,16 +13,13 @@ var Header = React.createClass({
       <div className="wrap">
         <div className="header">
           <div className="logo">
-            <a href="index.html"> </a>
+            <Link to={"home"}></Link>
           </div>
           <div className="top-nav">
             <ul>
-              <li className="active"><a href="index.html"> <span> </span></a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="#">Fonts</a></li>
-              <li><a href="#">Templates</a></li>
-              <li><a href="icons.html">Icons</a></li>
-              <li><a href="#">Wordpress</a></li>
+              <li className="active"><Link to={"home"}> <span> </span></Link></li>
+              <li><Link to={"about"}>About</Link></li>
+              <li><Link to={"contact"}>Contact</Link></li>
               <div className="clear"> </div>
             </ul>
           </div>

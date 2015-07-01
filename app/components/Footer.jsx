@@ -3,6 +3,8 @@
  */
 
 var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
 
 var Footer = React.createClass({
   displayName: 'Footer',
@@ -12,9 +14,9 @@ var Footer = React.createClass({
         <div className="wrap"> 
           <div className="footer-left">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><Link to={"home"}>Home</Link></li>
+              <li><Link to={"about"}>About</Link></li>
+              <li><Link to={"contact"}>Contact</Link></li>
               <div className="clear"></div>
             </ul>
           </div>

@@ -11,6 +11,7 @@ var Route = Router.Route;
 var App = require('./App');
 var Home = require('./components/Home');
 var About = require('./components/About');
+var Contact = require('./components/Contact');
 
 window.app = (function() {
   var requireFeatures = {
@@ -26,6 +27,7 @@ window.app = (function() {
       <DefaultRoute handler={Home} />
       <Route name="home" path="home" handler={Home} />
       <Route name="about" path="about" handler={About} />
+      <Route name="contact" path="contact" handler={Contact} />
     </Route>
   );
 
