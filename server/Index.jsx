@@ -7,7 +7,7 @@ var Template = require('./template');
 function Index() {}
 
 Index.prototype.load = function(callback) {
-  var home = React.renderToString(<Home />);
+  var home = React.renderToString(<Home {...this.props} />);
 
   new Template('../app/index.html').render({
     app: home
