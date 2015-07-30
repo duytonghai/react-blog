@@ -29,5 +29,5 @@ exports.about = {
 };
 
 exports.quote = {
-  "data": "Stay Hungry Stay Foolish"
+  "data": "Stay Hungry Stay Foolish Hehe"
 };

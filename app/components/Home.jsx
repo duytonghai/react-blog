@@ -14,23 +14,23 @@ var Quote = require('./Quote');
 
 var Home = React.createClass({
   displayName: 'Home',
-  // mixins: [FluxMixin, StoreWatchMixin('QuoteStore')],
-  // getStateFromFlux: function() {
-  //   var quoteStore = this.getFlux().store('QuoteStore');
+  mixins: [FluxMixin, StoreWatchMixin('QuoteStore')],
+  getStateFromFlux: function() {
+    var quoteStore = this.getFlux().store('QuoteStore');
 
-  //   return {
-  //     about: quoteStore.getDetail()
-  //   };
-  // },
-  // componentDidMount: function() {
-  //   if (!this.state.quote) {
-  //     this.getFlux().actions.resources.getQuoteDetail();
-  //   }
-  // },
+    return {
+      quote: quoteStore.getDetail()
+    };
+  },
+  componentDidMount: function() {
+    if (!this.state.quote) {
+      this.getFlux().actions.resources.getQuoteDetail();
+    }
+  },
   render: function() {
     return (
       <div>
-        <Quote />
+        <Quote quote={this.state.quote} />
         <Slider />
         <Article />
       </div>

@@ -3,16 +3,11 @@
  */
 
 var React = require('react');
-var Fluxxor = require('fluxxor');
-var FluxMixin = Fluxxor.FluxMixin(React);
-var StoreWatchMixin = Fluxxor.StoreWatchMixin;
 
 var Quote = React.createClass({
   displayName: 'Quote',
-  getInitialState: function() {
-    return {
-      quote: "Stay hungry, stay foolish"
-    };
+  propTypes: {
+    quote: React.PropTypes.string
   },
   render: function() {
     return (
@@ -20,7 +15,7 @@ var Quote = React.createClass({
       <div className="wrap">
         <ul>
           <li></li>
-          <li><p>{this.state.quote}</p></li>
+          <li><p>{this.props.quote}</p></li>
           <li></li>
           <div className="clear"></div>
         </ul>
